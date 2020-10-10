@@ -2,12 +2,12 @@ def d(n)
   # numbers < n which divide evenly into n
   i = 1
   divisors = []
-  while i < n
-    if n % i == 0
-      divisors << i
-    end
+  
+  n.times do
+    divisors << i if n % i == 0
     i += 1
   end
+  
   divisors.reduce(:+)
 end
 
